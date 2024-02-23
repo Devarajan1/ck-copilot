@@ -116,7 +116,7 @@ export default function DescriptionGenerator() {
 
             <div className="w-[25rem] border-r-[0.02rem] fixed z-[80] h-full hidden md:block" >
                 <div className="w-full h-[20vh] p-4 flex relative" style={{ background: "linear-gradient(90deg, rgba(222,228,255,1) 10%, rgba(180,161,255,1) 100%)" }}>
-                    <p className=" text-[1rem] font-[550] w-[60%] z-[2]" >{process.env.NEXT_PUBLIC_TITTLE} Smart Tagging</p>
+                    <p className=" text-[1.2rem] font-[550] w-[60%] z-[2]" >{process.env.NEXT_PUBLIC_TITTLE} Smart Tagging</p>
                     <Image src={MainBg} className="w-[100%] h-[100%] absolute bottom-0 right-0  flex btl" alt="img" />
                 </div>
                 {uploadedImg?.length > 0 ? <p className="text-lg font-[500] w-full text-center mt-8">Uploaded Image</p> : <p className=" mt-8 text-lg font-[500] w-full text-center">Upload Image</p>}
@@ -168,7 +168,7 @@ export default function DescriptionGenerator() {
                     <SheetContent side="left" className="p-0 max-h-[100dvh] z-[100]">
                         <div >
                             <div className="w-full h-[20vh] p-4 flex relative" style={{ background: "linear-gradient(90deg, rgba(222,228,255,1) 10%, rgba(180,161,255,1) 100%)" }}>
-                                <p className=" text-[1rem] font-[550] w-[60%] z-[2]" >{process.env.NEXT_PUBLIC_TITTLE} Smart Tagging</p>
+                                <p className=" text-[1.2rem] font-[550] w-[60%] z-[2]" >{process.env.NEXT_PUBLIC_TITTLE} Smart Tagging</p>
                                 <Image src={MainBg} className="w-[100%] h-[100%] absolute bottom-0 right-0  flex btl" alt="img" />
                             </div>
                             {uploadedImg?.length > 0 ? <p className="text-lg font-[500] w-full text-center mt-8">Uploaded Image</p> : <p className=" mt-8 text-lg font-[500] w-full text-center">Upload Image</p>}

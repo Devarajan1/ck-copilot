@@ -520,10 +520,16 @@ export default function Flipkart() {
                                         <p className="text-[rgb(0,0,0,0.66)] text-center" style={{ fontSize: ".8rem" }}>Upload a Product picture here</p>
                                     </div> */}
                                     <div onClick={() => { router.push('/lens') }} className=" my-8 flex border-[0.02rem] p-3 rounded-xl justify-center hover:cursor-pointer">
-                                        <ImagePlus />
-                                        <p className="ml-4 text-[1rem]" onClick={() => { router.push('/lens')/* document.getElementById('fileInput').click() */ }}>Upload Product Picture</p>
+
+                                        <p className=" text-[1rem]" onClick={() => { router.push('/lens')/* document.getElementById('fileInput').click() */ }}>{process.env.NEXT_PUBLIC_TITTLE} Lens</p>
                                     </div>
-                                </div> </div> : null}
+                                    <div onClick={() => { router.push('/tagging') }} className="ml-4 my-8 flex border-[0.02rem] p-3 rounded-xl justify-center hover:cursor-pointer">
+
+                                        <p className=" text-[1rem]" onClick={() => { router.push('/tagging')/* document.getElementById('fileInput').click() */ }}>Smart Tagging</p>
+                                    </div>
+                                </div>
+
+                            </div> : null}
                             {selectedImage ? <div className="w-[60%] ml-[20%]  justify-center hover:cursor-not-allowed md:flex hidden">
                                 <input type="file" disabled={true} style={{
                                     display: "none"
@@ -546,12 +552,21 @@ export default function Flipkart() {
                                     {desc.product_name}
                                 </p>
                             </div>
-                            <div onClick={() => { router.push('/lens') }} className="flex border-[0.02rem] p-3 rounded-xl justify-center hover:cursor-pointer">
-                                {/* <input type="file" id="fileInput" style={{
+                            <div className="flex w-full justify-center">
+                                <div onClick={() => { router.push('/lens') }} className="flex border-[0.02rem] p-3 rounded-xl justify-center hover:cursor-pointer">
+                                    {/* <input type="file" id="fileInput" style={{
                                     display: "none"
                                 }} onChange={handleImageChange} /> */}
-                                <ImagePlus />
-                                <p className="ml-4 text-[1rem]" onClick={() => { router.push('/lens')/* document.getElementById('fileInput').click() */ }}>Upload Another Product</p>
+
+                                    <p className=" text-[1rem]" onClick={() => { router.push('/lens')/* document.getElementById('fileInput').click() */ }}>{process.env.NEXT_PUBLIC_TITTLE} Lens</p>
+                                </div>
+                                <div onClick={() => { router.push('/tagging') }} className="ml-4 flex border-[0.02rem] p-3 rounded-xl justify-center hover:cursor-pointer">
+                                    {/* <input type="file" id="fileInput" style={{
+                                    display: "none"
+                                }} onChange={handleImageChange} /> */}
+
+                                    <p className=" text-[1rem]" onClick={() => { router.push('/tagging')/* document.getElementById('fileInput').click() */ }}>Smart Tagging</p>
+                                </div>
                             </div>
                         </>
                         : null}

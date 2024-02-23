@@ -50,7 +50,7 @@ export default function DescriptionGenerator() {
         setImgData([]);
         setTableData('')
         const formData = new FormData();
-        formData.append('image_url', imageFile);
+        formData.append('image', imageFile);
         try {
             const response = await fetch(
                 process.env.NEXT_PUBLIC_DESCRIPTION_URL + '/generate', {

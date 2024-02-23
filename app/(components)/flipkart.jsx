@@ -488,7 +488,7 @@ export default function Flipkart() {
     return (
         <>
             <div className="w-full h-[20vh] p-4 flex relative" style={{ background: "linear-gradient(90deg, rgba(222,228,255,1) 10%, rgba(180,161,255,1) 100%)" }}>
-                <p className="text-[1.4rem] md:text-[1.75rem] font-[550] w-[60%] z-[2]" >Cloud Kinetics Copilot</p>
+                <p className="text-[1.4rem] md:text-[1.75rem] font-[550] w-[60%] z-[2]" >{process.env.NEXT_PUBLIC_TITTLE} Product Copilot</p>
                 <Image src={MainBg} className="w-[100%] h-[100%] absolute bottom-0 right-0  flex btl" alt="img" />
             </div>
             <div className="w-full flex-1   p-4 ">
@@ -509,7 +509,7 @@ export default function Flipkart() {
                             </div>
                         </div> :
                         <>
-                            {!selectedImage ? <div className="md:block hidden">  <p className=" font-semibold   text-center w-[64%] ml-[15%] mt-[2rem]" style={{ fontSize: "1.1rem" }}>Upload a Photo or a URL to use our Cloud Kinetics Product Copilot</p>
+                            {!selectedImage ? <div className="md:block hidden">  <p className=" font-semibold   text-center w-[64%] ml-[15%] mt-[2rem]" style={{ fontSize: "1.1rem" }}>Upload a Photo or a URL to use our {process.env.NEXT_PUBLIC_TITTLE} Product Copilot</p>
                                 <div className="  w-[90%] ml-[5%] flex justify-center ">
                                     {/* <input type="file" disabled={true} id="fileInput" style={{
                                         display: "none"

@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Cloud Kinetics Product CoPilot',
+  title: `${process.env.NEXT_PUBLIC_TITTLE} Product CoPilot`,
   description: 'Copilot for Ecommerce',
 }
 

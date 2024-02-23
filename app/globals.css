@@ -213,3 +213,37 @@
   content: ", \A"; /* Add comma and line break */
   white-space: pre; /* Preserve line break */
 }
+
+/* Basic table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffff;
+  margin-bottom: 1rem;
+}
+
+/* Header row styling */
+th {
+  background-color: #ffff;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Data row styling */
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Alternate row coloring */
+tr:nth-child(even) {
+  background-color: #ffff;
+}
+
+/* Hover effect */
+tr:hover {
+  background-color: #ddd;
+}

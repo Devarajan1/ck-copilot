@@ -497,7 +497,7 @@ export default function ScrapeChat() {
                                     <div className="  my-4 ">
                                         <div className="flex mb-1">
                                             <Image className="w-[27px] h-[27px] " src={BotImg} alt="bot img" />
-                                            <p className="font-bold p-1 pl-2">Cloud Kinetics Copilot</p>
+                                            <p className="font-bold p-1 pl-2">{process.env.NEXT_PUBLIC_TITTLE} Copilot</p>
                                         </div>
                                         <ReactMarkdown className="bl p-4  bg-[rgb(255,255,255)] text-[#121212] rounded-lg border-[0.1rem]"
                                             components={{
@@ -532,7 +532,7 @@ export default function ScrapeChat() {
                                     <div className=" my-4">
                                         <div className="flex mb-1 justify-between">
                                             <div className="font-bold  flex">
-                                                <Image className="w-[27px] h-[27px] " src={BotImg} alt="bot img" /><p className="p-1 pl-2">Cloud Kinetics Copilot</p></div>
+                                                <Image className="w-[27px] h-[27px] " src={BotImg} alt="bot img" /><p className="p-1 pl-2">{process.env.NEXT_PUBLIC_TITTLE} Copilot</p></div>
 
                                             <div className="mr-2">
                                                 <DropdownMenu>
@@ -592,7 +592,7 @@ export default function ScrapeChat() {
                                 {messages.chart?.length > 0 ?
                                     <div className="mb-4   w-full"><div className="flex mb-1">
                                         <Image className="w-[27px] h-[27px] " src={BotImg} alt="bot img" />
-                                        <p className="font-bold p-1 pl-2">Cloud Kinetics Copilot</p>
+                                        <p className="font-bold p-1 pl-2">{process.env.NEXT_PUBLIC_TITTLE} Copilot</p>
                                     </div>
                                         <div className="bl p-4 w-full   bg-[#ffff] text-[#121212] rounded-lg">
                                             <LineChart className="w-full" data={messages.chart} />
@@ -602,7 +602,7 @@ export default function ScrapeChat() {
                                 {messages.emo?.length > 0 ?
                                     <div className="mb-4   w-full"><div className="flex mb-1">
                                         <Image className="w-[27px] h-[27px] " src={BotImg} alt="bot img" />
-                                        <p className="font-bold p-1 pl-2">Cloud Kinetics Copilot</p>
+                                        <p className="font-bold p-1 pl-2">{process.env.NEXT_PUBLIC_TITTLE} Copilot</p>
                                     </div>
                                         <div className="w-full bl  p-4  bg-[#ffff] text-[#121212] rounded-lg">
                                             <BarChart className="w-full" />
@@ -616,7 +616,7 @@ export default function ScrapeChat() {
                             <div className=" mt-4">
                                 <div className="flex mb-1">
                                     <Image className="w-[27px] h-[27px] " src={BotImg} alt="bot img" />
-                                    <p className="font-bold p-1 pl-2">Cloud Kinetics Copilot</p>
+                                    <p className="font-bold p-1 pl-2">{process.env.NEXT_PUBLIC_TITTLE} Copilot</p>
                                 </div>
                                 <TypingAnimation className=" flex h-[5px] items-center  w-[30%]" />
                             </div>

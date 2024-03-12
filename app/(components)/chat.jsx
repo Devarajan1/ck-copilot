@@ -116,7 +116,7 @@ export default function ScrapeChat() {
     const model = [
         { value: "gpt-4", name: "gpt-4", enabled: true },
         { value: "gpt-3.5", name: "gpt-3.5", enabled: true },
-        { value: "zypher-7b", name: "zephyr-7b", enabled: true },
+        { value: "zypher-7b", name: "zephyr-7b", enabled: false },
         { value: "llama2:13b", name: "llama2-13b", enabled: false },
         { value: "openhermes-7b", name: "openhermes-7b", enabled: false },
         { value: "mixtral", name: "mixtral-8x7b", enabled: false },

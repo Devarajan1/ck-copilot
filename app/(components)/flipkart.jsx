@@ -401,7 +401,7 @@ export default function Flipkart() {
             }
         }
         else {
-            alert("Please Enter Flipkart Product URL")
+            alert("Please Enter  Product URL")
         }
     }
     function setReviewDataFun(i) {
@@ -443,7 +443,7 @@ export default function Flipkart() {
             }
         }
         else {
-            alert("Please Enter Flipkart Product URL")
+            alert("Please Enter  Product URL")
         }
     }
     async function descriptionFun(i) {
@@ -469,7 +469,7 @@ export default function Flipkart() {
             }
         }
         else {
-            alert("Please Enter Flipkart Product URL")
+            alert("Please Enter  Product URL")
         }
     }
     function urlError() {
@@ -573,7 +573,7 @@ export default function Flipkart() {
                     {scraping ? null : <p className="font-medium text-lg text-center mt-8">Enter Product URL</p>}
                     <div className="w-full flex flex-col justify-center">
                         <div className="flex justify-between w-full mx-auto rounded-xl h-[3rem] border-[0.02rem]">
-                            <input id="urlInput" value={url} ref={textareaRef} className="w-full p-2 outline-none bg-transparent" type="text  p-2" placeholder='Enter Flipkart  Product URL' onChange={(e) => setUrl(e.target.value)} />
+                            <input id="urlInput" value={url} ref={textareaRef} className="w-full p-2 outline-none bg-transparent" type="text  p-2" placeholder='Enter  Product URL' onChange={(e) => setUrl(e.target.value)} />
                             <Button className=" py-0 px-3 rounded-lg h-[2rem] hover:cursor-pointer  m-2" onClick={() => { scrape(), setSelectedImage() }}>Submit</Button>
                         </div>
                         <p className="w-full px-8 text-[#ff8a90] text-sm  hidden mt-[.25rem]" id="errorDiv">Enter Product URL</p>

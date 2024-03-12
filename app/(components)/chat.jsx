@@ -319,7 +319,7 @@ export default function ScrapeChat() {
             }
         }
         else {
-            alert("Please Enter Flipkart Product URL")
+            alert("Please Enter Product URL")
         }
     }
     function setReviewDataFun(i) {
@@ -365,7 +365,7 @@ export default function ScrapeChat() {
             }
         }
         else {
-            alert("Please Enter Flipkart Product URL")
+            alert("Please Enter  Product URL")
         }
     }
     async function descriptionFun(i) {
@@ -399,7 +399,7 @@ export default function ScrapeChat() {
             }
         }
         else {
-            alert("Please Enter Flipkart Product URL")
+            alert("Please Enter  Product URL")
         }
     }
     function urlError() {

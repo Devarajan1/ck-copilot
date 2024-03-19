@@ -371,7 +371,7 @@ export default function ScrapeChat() {
     async function descriptionFun(i) {
         if (url?.length > 0 || url) {
             try {
-                const value = i <= 4 ? {
+                const value = i <= 5 ? {
                     id: chatId,
                     desc_id: i.toString(),
                     llm_model: modelValue,
@@ -665,8 +665,9 @@ export default function ScrapeChat() {
                                 <p className="  hover:cursor-pointer px-2 md:px-2 xl:px-4 py-1 bg-[rgba(255,255,255,0.44)]  rounded-3xl border-[0.02rem] flex justify-between  mr-2 mb-2 hover:bg-[#fff]" style={{ fontSize: "calc(.45*(1.1vw + 1.5vh))" }} onClick={() => { descriptionFun(2), setInputPopUp(!inputPopUp) }}>Technical</p>
                                 <p className="  hover:cursor-pointer px-2 md:px-2 xl:px-4 py-1 bg-[rgba(255,255,255,0.44)] rounded-3xl border-[0.02rem] flex justify-between  mr-2 mb-2 hover:bg-[#fff]" style={{ fontSize: "calc(.45*(1.1vw + 1.5vh))" }} onClick={() => { descriptionFun(3), setInputPopUp(!inputPopUp) }}>Friendly</p>
                                 <p className="  hover:cursor-pointer px-2 md:px-2 xl:px-4 py-1 bg-[rgba(255,255,255,0.44)] rounded-3xl border-[0.02rem] flex justify-between  mr-2 mb-2 hover:bg-[#fff]" style={{ fontSize: "calc(.45*(1.1vw + 1.5vh))" }} onClick={() => { descriptionFun(4), setInputPopUp(!inputPopUp) }}>Straightforward</p>
-                                <p className="  hover:cursor-pointer px-2 md:px-2 xl:px-4 py-1 bg-[rgba(255,255,255,0.44)] rounded-3xl border-[0.02rem] flex justify-between  mr-2 mb-2 hover:bg-[#fff]" style={{ fontSize: "calc(.45*(1.1vw + 1.5vh))" }} onClick={() => { descriptionFun(5), setInputPopUp(!inputPopUp) }}>Highlights</p>
-                                <p className="  hover:cursor-pointer px-2 md:px-2 xl:px-4 py-1 bg-[rgba(255,255,255,0.44)] rounded-3xl border-[0.02rem] flex justify-between  mr-2 mb-2 hover:bg-[#fff]" style={{ fontSize: "calc(.45*(1.1vw + 1.5vh))" }} onClick={() => { descriptionFun(6), setInputPopUp(!inputPopUp) }}>Dejargon Description</p>
+                                <p className="  hover:cursor-pointer px-2 md:px-2 xl:px-4 py-1 bg-[rgba(255,255,255,0.44)] rounded-3xl border-[0.02rem] flex justify-between  mr-2 mb-2 hover:bg-[#fff]" style={{ fontSize: "calc(.45*(1.1vw + 1.5vh))" }} onClick={() => { descriptionFun(5), setInputPopUp(!inputPopUp) }}>Sassy</p>
+                                <p className="  hover:cursor-pointer px-2 md:px-2 xl:px-4 py-1 bg-[rgba(255,255,255,0.44)] rounded-3xl border-[0.02rem] flex justify-between  mr-2 mb-2 hover:bg-[#fff]" style={{ fontSize: "calc(.45*(1.1vw + 1.5vh))" }} onClick={() => { descriptionFun(6), setInputPopUp(!inputPopUp) }}>Highlights</p>
+                                <p className="  hover:cursor-pointer px-2 md:px-2 xl:px-4 py-1 bg-[rgba(255,255,255,0.44)] rounded-3xl border-[0.02rem] flex justify-between  mr-2 mb-2 hover:bg-[#fff]" style={{ fontSize: "calc(.45*(1.1vw + 1.5vh))" }} onClick={() => { descriptionFun(7), setInputPopUp(!inputPopUp) }}>Dejargon Description</p>
                             </div> : null}
                             {inputPopUp && inputReview ? <div className="flex w-full   my-3 transitionCS" >
                                 <p className=" hover:cursor-pointer px-2 md:px-2 xl:px-4 py-1 bg-[rgba(255,255,255,0.44)] rounded-3xl border-[0.02rem] flex justify-between  mr-2 hover:bg-[#fff]" style={{ fontSize: "calc(.45*(1.1vw + 1.5vh))" }} onClick={() => { setReviewDataFun(1), setInputPopUp(!inputPopUp) }}>Summary</p>

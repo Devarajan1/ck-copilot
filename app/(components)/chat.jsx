@@ -106,7 +106,7 @@ export default function ScrapeChat() {
     const [audioPopup, setAudioPopup] = useState(false)
     const [audioLoader, setAudioLoader] = useState(false)
     const [sheetdata, setSheetdata] = useState(false)
-    const type = ['desc', 'desc', 'desc', 'desc', 'desc', 'highlights', 'dejarg']
+
     const [initialData, setInitialData] = useState({
         inputChat: inputChat,
         inputReview: inputReview,
@@ -375,11 +375,11 @@ export default function ScrapeChat() {
                     id: chatId,
                     desc_id: i.toString(),
                     llm_model: modelValue,
-                    type: type[i]
+                    type: "desc"
                 } : {
                     id: chatId,
                     llm_model: modelValue,
-                    type: type[i]
+                    type: i == 5 ? "highlights" : "dejarg"
                 }
                 setChildLoader(true)
                 const response = await axios.post(process.env.NEXT_PUBLIC_BOT_URL + '/bot/desc-gen',

@@ -54,7 +54,7 @@ export default function Lens() {
         setImgData([])
         const formData = new FormData();
         formData.append('img', imageFile);
-        axios.post(process.env.NEXT_PUBLIC_LENS_URL + '/search_image', formData, {
+        axios.post(process.env.NEXT_PUBLIC_LENS_URL + '/image_search', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

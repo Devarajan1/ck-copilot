@@ -63,7 +63,7 @@ export default function Lens() {
             setImgData(res.data)
             console.log(res)
             // setDesc({
-            //     image_url:res.data.product_image_url,
+            //     image_url:res.data.image_url,
             //     product_name:res.data.product_name
             // })
             // setImageDescription(res.data);
@@ -183,29 +183,29 @@ export default function Lens() {
                             <div className="w-full p-4 rounded-sm flex flex-wrap">
                                 {imgData.map((img, index) => (
                                     <div key={index} className="flex  w-full p-1  border-b-[rgb(18,18,18,0.1)] bg-[#FFF] border-[1px]  hover:cursor-pointer" onClick={() => window.open(img.product_url, 'blank')}>
-                                        <img className="max-w-[30%] h-[fit-content] min-h-[100px] max-h-[250px] p-8" src={img.product_image_url} style={{ borderTopRightRadius: '5px', borderTopLeftRadius: '5px' }} />
+                                        <img className="max-w-[30%] h-[fit-content] min-h-[100px] max-h-[250px] p-8" src={img.image_url} style={{ borderTopRightRadius: '5px', borderTopLeftRadius: '5px' }} />
                                         <div className=" p-2 w-[55%]">
                                             <p className=" text-lg font-[550] ">{img.product_name}</p>
-                                            <div className="flex w-full text-[#878787] font-[550] mt-1">
+                                            {/* <div className="flex w-full text-[#878787] font-[550] mt-1">
                                                 <div className="px-2 flex bg-[#388e3c] w-[50px] rounded-sm text-white"><p className="text-md">{img.Rating}</p><Star className="" /></div>
                                                 <p className="px-2 text-sm">{img.RatingsCount} Ratings</p>
                                                 <p>&</p>
                                                 <p className="px-2 text-sm">{img.ReviewsCount} Reviews</p>
-                                            </div>
-                                            <p className="mt-2 text-sm font-[450] text-[#000] content">{img.Highlights}</p>
+                                            </div> */}
+                                            {/* <p className="mt-2 text-sm font-[450] text-[#000] content">{img.Highlights}</p> */}
                                         </div>
-                                        <div className=" w-[15%] p-2">
+                                        {/* <div className=" w-[15%] p-2">
                                             <p className="text-xl font-[550]">{img.Price}</p>
                                             <div className="flex text-center">
                                                 <p className="px-2 text-sm text-[#878787] line-through">{img.OriginalPrice}</p>
                                                 <p className="px-2 mt-1 text-xs text-[#388e3c] font-[500]">{img.Discount}</p>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 ))}
                                 {/* {imgData.map((img, index) => (
                                     <div key={index} className="md:w-[22%] w-[90%] max-w-[300px] p-1  m-2 bg-[#f1f1f1] border-[2px]  rounded-lg hover:cursor-pointer" onClick={() => window.open(img.product_url, 'blank')}>
-                                        <img className="w-full  min-h-[100px] h-[fit-content] max-h-[300px]  " src={img.product_image_url} style={{ borderTopRightRadius: '5px', borderTopLeftRadius: '5px' }} />
+                                        <img className="w-full  min-h-[100px] h-[fit-content] max-h-[300px]  " src={img.image_url} style={{ borderTopRightRadius: '5px', borderTopLeftRadius: '5px' }} />
                                         <div className="w-full p-2 bg-[#f1f1f1]">
                                             <p className="text-center text-xs bg-[#f1f1f1]">{img.product_name}</p>
                                         </div>

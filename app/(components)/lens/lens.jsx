@@ -61,7 +61,6 @@ export default function Lens() {
         }).then(res => {
             setLoading(false)
             setImgData(res.data)
-            console.log(res)
             // setDesc({
             //     image_url:res.data.image_url,
             //     product_name:res.data.product_name

@@ -116,10 +116,11 @@ export default function ScrapeChat() {
     const model = [
         { value: "gpt-4", name: "gpt-4", enabled: true },
         { value: "gpt-3.5", name: "gpt-3.5", enabled: true },
-        { value: "zypher-7b", name: "zephyr-7b", enabled: false },
+        { value: "featherlite", name: "Featherlite", enabled: true },
+        // { value: "zypher-7b", name: "zephyr-7b", enabled: false },
         { value: "llama2:13b", name: "llama2-13b", enabled: false },
         { value: "openhermes-7b", name: "openhermes-7b", enabled: false },
-        { value: "mixtral", name: "mixtral-8x7b", enabled: false },
+        // { value: "mixtral", name: "mixtral-8x7b", enabled: false },
         { value: "llama2:70b", name: "llama2-70b", enabled: false }
     ]
     async function enTohi(msg, voice, ln) {
@@ -379,7 +380,7 @@ export default function ScrapeChat() {
                 } : {
                     id: chatId,
                     llm_model: modelValue,
-                    type: i == 5 ? "highlights" : "dejarg"
+                    type: i == 6 ? "highlights" : "dejarg"
                 }
                 setChildLoader(true)
                 const response = await axios.post(process.env.NEXT_PUBLIC_BOT_URL + '/bot/desc-gen',

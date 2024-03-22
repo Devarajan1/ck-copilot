@@ -181,36 +181,36 @@ export default function Lens() {
                     {imgData?.length > 0 ?
                         <div className="w-full h-full flex justify-center md:mt-0 mt-4">
                             <div className="w-full p-4 rounded-sm flex flex-wrap">
-                                {imgData.map((img, index) => (
+                                {/* {imgData.map((img, index) => (
                                     <div key={index} className="flex  w-full p-1  border-b-[rgb(18,18,18,0.1)] bg-[#FFF] border-[1px]  hover:cursor-pointer" onClick={() => window.open(img.product_url, 'blank')}>
                                         <img className="max-w-[30%] h-[fit-content] min-h-[100px] max-h-[250px] p-8" src={img.image_url} style={{ borderTopRightRadius: '5px', borderTopLeftRadius: '5px' }} />
                                         <div className=" p-2 w-[55%]">
                                             <p className=" text-lg font-[550] ">{img.product_name}</p>
-                                            {/* <div className="flex w-full text-[#878787] font-[550] mt-1">
+                                            <div className="flex w-full text-[#878787] font-[550] mt-1">
                                                 <div className="px-2 flex bg-[#388e3c] w-[50px] rounded-sm text-white"><p className="text-md">{img.Rating}</p><Star className="" /></div>
                                                 <p className="px-2 text-sm">{img.RatingsCount} Ratings</p>
                                                 <p>&</p>
                                                 <p className="px-2 text-sm">{img.ReviewsCount} Reviews</p>
-                                            </div> */}
-                                            {/* <p className="mt-2 text-sm font-[450] text-[#000] content">{img.Highlights}</p> */}
+                                            </div>
+                                            <p className="mt-2 text-sm font-[450] text-[#000] content">{img.Highlights}</p>
                                         </div>
-                                        {/* <div className=" w-[15%] p-2">
+                                        <div className=" w-[15%] p-2">
                                             <p className="text-xl font-[550]">{img.Price}</p>
                                             <div className="flex text-center">
                                                 <p className="px-2 text-sm text-[#878787] line-through">{img.OriginalPrice}</p>
                                                 <p className="px-2 mt-1 text-xs text-[#388e3c] font-[500]">{img.Discount}</p>
                                             </div>
-                                        </div> */}
-                                    </div>
-                                ))}
-                                {/* {imgData.map((img, index) => (
-                                    <div key={index} className="md:w-[22%] w-[90%] max-w-[300px] p-1  m-2 bg-[#f1f1f1] border-[2px]  rounded-lg hover:cursor-pointer" onClick={() => window.open(img.product_url, 'blank')}>
-                                        <img className="w-full  min-h-[100px] h-[fit-content] max-h-[300px]  " src={img.image_url} style={{ borderTopRightRadius: '5px', borderTopLeftRadius: '5px' }} />
-                                        <div className="w-full p-2 bg-[#f1f1f1]">
-                                            <p className="text-center text-xs bg-[#f1f1f1]">{img.product_name}</p>
                                         </div>
                                     </div>
                                 ))} */}
+                                {imgData.map((img, index) => (
+                                    <div key={index} className="md:w-[22%] w-[90%] max-w-[300px] p-1 hover:border-[.02rem] hover:border-[#121212] hover:scale-105 hover:duration-10 hover:transition-all m-2 bg-[#f1f1f1] border-[2px]  rounded-lg hover:cursor-pointer" onClick={() => window.open(img.product_url, 'blank')}>
+                                        <img className="w-full  min-h-[100px] h-[fit-content] max-h-[300px]  " src={img.image_url} style={{ borderTopRightRadius: '5px', borderTopLeftRadius: '5px' }} />
+                                        <div className="w-full p-2 bg-[#f1f1f1]">
+                                            <p className="text-center text-sm font-semibold bg-[#f1f1f1]">{img.product_name}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
@@ -229,25 +229,53 @@ export default function Lens() {
                                     </div>
                                     <p className=" text-xl font-[500] text-center  mt-4">Utilize image recognition to scan and search for products corresponding to the uploaded image.</p>
                                 </div>
-                            </div> : <div className="w-full h-full flex justify-center md:mt-0 mt-4">
-                                <div className="w-full p-8  ">
-                                    <div className=" w-[95%]  p-1  mx-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
-                                        <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
-                                    </div>
-                                    <div className=" w-[95%]  p-1  mx-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
-                                        <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
-                                    </div>
-                                    <div className=" w-[95%]  p-1  mx-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
-                                        <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
-                                    </div>
-                                    <div className=" w-[95%]  p-1  mx-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
-                                        <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
-                                    </div>
-                                    <div className=" w-[95%]  p-1  mx-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
-                                        <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
-                                    </div>
+                            </div>
+                            : <div className="w-full h-full flex  flex-wrap justify-center md:mt-0 mt-4">
+                                <div className=" md:w-[22%] w-[90%] max-w-[300px] p-1 m-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                                    <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
                                 </div>
-                            </div>}</>
+                                <div className=" md:w-[22%] w-[90%] max-w-[300px] p-1 m-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                                    <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                                </div>
+                                <div className=" md:w-[22%] w-[90%] max-w-[300px] p-1 m-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                                    <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                                </div>
+                                <div className=" md:w-[22%] w-[90%] max-w-[300px] p-1 m-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                                    <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                                </div>
+                                <div className=" md:w-[22%] w-[90%] max-w-[300px] p-1 m-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                                    <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                                </div>
+                                <div className=" md:w-[22%] w-[90%] max-w-[300px] p-1 m-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                                    <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                                </div>
+                                <div className=" md:w-[22%] w-[90%] max-w-[300px] p-1 m-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                                    <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                                </div>
+                                <div className=" md:w-[22%] w-[90%] max-w-[300px] p-1 m-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                                    <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                                </div>
+                            </div>
+                            //  <div className="w-full h-full flex justify-center md:mt-0 mt-4">
+                            //     <div className="w-full p-8  ">
+                            //         <div className=" w-[95%]  p-1  mx-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                            //             <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                            //         </div>
+                            //         <div className=" w-[95%]  p-1  mx-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                            //             <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                            //         </div>
+                            //         <div className=" w-[95%]  p-1  mx-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                            //             <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                            //         </div>
+                            //         <div className=" w-[95%]  p-1  mx-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                            //             <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                            //         </div>
+                            //         <div className=" w-[95%]  p-1  mx-2 bg-[#f1f1f1]  rounded-lg hover:cursor-pointer">
+                            //             <div className=" animate-pulse w-full h-[300px] md:h-[300px] bg-[rgba(0,0,0,0.08)] rounded "></div>
+                            //         </div>
+                            //     </div>
+                            // </div>
+                        }</>
                     }
                 </div>
             </div>
